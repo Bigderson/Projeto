@@ -1,0 +1,20 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+#topo{
+    width: 960px;
+    margin: auto;
+    background-color: #ccc;
+}
+
+header #top{
+    display: flex;
+    align-items: center;
+}
+
+
+
+
