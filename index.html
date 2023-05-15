@@ -14,16 +14,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Supermercado A</title>
-
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
 </head>
 
-<body>
+<body onresize="mudouTamanho()">
 
-    <header>
+    <header id="navbar">
+
 
         <section id="topo">
+
             <div id="logo">
                 <img src="imagens/logoA.png">
             </div>
@@ -35,40 +38,24 @@
                 <img src="icones/carrinho.png">
                 <p>TOTAL: R$ 00,00</p>
             </div>
+
         </section>
 
-        <nav>
-            <div>
-                <span class="categorias"><a href="#carnes">Carne e Frango</a></span>
-            </div>
-            <div>
-                <span class="categorias"><a href="#margarinas">Margarinas</a></span>
-            </div>
-            <div>
-                <span class="categorias"><a href="#graos">Grãos</a></span>
-            </div>
-            <div>
-                <span class="categorias"><a href="#temperos">Temperos</a></span>
-            </div>
-            <div>
-                <span class="categorias"><a href="#doces">Doces</a></span>
-            </div>
-            <div>
-                <span class="categorias"><a href="#bebidas">Bebidas</a></span>
-            </div>
-            <div>
-                <span class="categorias"><a href="#higiene">Higiene e Limpeza</a></span>
-            </div>
-            <div>
-                <span class="categorias"><a href="#verduras">Verduras e Legumes</a></span>
-            </div>
-            <div>
-                <span class="categorias"><a href="#frutas">Frutas</a></span>
-            </div>
-            <div>
-                <span class="categorias"><a href="#peixes">Peixes e Derivados</a></span>
-            </div>
-        </nav>
+        <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
+        <menu id="itens">
+            <ul>
+                <li><a href="#carnes">Carne e Frango</a></li>
+                <li><a href="#margarinas">Margarinas</a></li>
+                <li><a href="#graos">Grãos</a></li>
+                <li><a href="#temperos">Temperos</a></li>
+                <li><a href="#doces">Doces</a></li>
+                <li><a href="#bebidas">Bebidas</a></li>
+                <li><a href="#higiene">Higiene e Limpeza</a></li>
+                <li><a href="#verduras">Verdura e Legumes</a></li>
+                <li><a href="#frutas">Frutas</a></li>
+                <li><a href="#peixes">Peixes e Derivados</a></li>
+            </ul>
+        </menu>
 
     </header>
 
@@ -185,7 +172,7 @@
 
         <section id="margarinas">
             <h3>Margarinas</h3>
-            
+
             <section class="container">
                 <figure>
                     <img src="imagens/img12.png">
@@ -219,18 +206,35 @@
                         <button type="submit">Adicionar</button>
                     </div>
                 </figure>
+                <figure>
+                    <img src="imagens/manteiga-delicata.png">
+                    <div>
+                        <strong>Margarina Delicata 250g</strong>
+                        <p>R$ 6,80</p>
+                        <button type="submit">Adicionar</button>
+                    </div>
+                </figure>
+
             </section>
 
         </section>
 
         <section id="graos">
             <h3>Grãos</h3>
-            
+
             <section class="container">
                 <figure>
                     <img src="imagens/img13.png">
                     <div>
                         <strong>Arroz branco Blue Ville tipo 1 5 kg</strong>
+                        <p>R$ 28,98</p>
+                        <button type="submit">Adicionar</button>
+                    </div>
+                </figure>
+                <figure>
+                    <img src="imagens/feijão-gardingo.png">
+                    <div>
+                        <strong></strong>
                         <p>R$ 28,98</p>
                         <button type="submit">Adicionar</button>
                     </div>
@@ -265,7 +269,7 @@
 
         <section id="temperos">
             <h3>Temperos</h3>
-            
+
             <section class="container">
                 <figure>
                     <img src="imagens/img14.png">
@@ -275,19 +279,67 @@
                         <button type="submit">Adicionar</button>
                     </div>
                 </figure>
+                <figure>
+                    <img src="imagens/Açafrão.png">
+                    <div>
+                        <strong>Açafrão da Terra KITANO Pacote 50g</strong>
+                        <p>R$ 11,50</p>
+                        <button type="submit">Adicionar</button>
+                    </div>
+                </figure>
+                <figure>
+                    <img src="imagens/Coentro.png">
+                    <div>
+                        <strong>Coentro em Pó Gardenia 50g</strong>
+                        <p>R$ 23,70 </p>
+                        <button type="submit">Adicionar</button>
+                    </div>
+                </figure>
+                <figure>
+                    <img src="imagens/Pimenta.png">
+                    <div>
+                        <strong>Kitano Pimenta Do Reino Preta E Cominho Em Pó</strong>
+                        <p>R$ 10,98</p>
+                        <button type="submit">Adicionar</button>
+                    </div>
+                </figure>
+                <figure>
+                    <img src="imagens/Colorau.png">
+                    <div>
+                        <strong>Colorau Mais Sabor 200G</strong>
+                        <p>R$ 10,50</p>
+                        <button type="submit">Adicionar</button>
+                    </div>
+                </figure>
             </section>
 
         </section>
 
         <section id="doces">
             <h3>Doces</h3>
-           
+
             <section class="container">
                 <figure>
                     <img src="imagens/img15.png">
                     <div>
                         <strong>Leite condensado Moça semidesnatado TP 395 g</strong>
                         <p>R$ 4,69</p>
+                        <button type="submit">Adicionar</button>
+                    </div>
+                </figure>
+                <figure>
+                    <img src="imagens/chocolatelacta.png">
+                    <div>
+                        <strong>Chocolate ao Leite Lacta Pacote 165g Tamanho Família</strong>
+                        <p>R$ 4,69</p>
+                        <button type="submit">Adicionar</button>
+                    </div>
+                </figure>
+                <figure>
+                    <img src="imagens/chocolate-Branco.png">
+                    <div>
+                        <strong>Chocolate ao Leite para recheios de bolos 1kg</strong>
+                        <p>R$ 35,60</p>
                         <button type="submit">Adicionar</button>
                     </div>
                 </figure>
@@ -313,7 +365,7 @@
 
         <section id="bebidas">
             <h3>Bebidas</h3>
-            
+
             <section class="container">
                 <figure>
                     <img src="imagens/img18.png">
@@ -363,29 +415,8 @@
                         <button type="submit">Adicionar</button>
                     </div>
                 </figure>
-                <figure>
-                    <img src="imagens/img24.png">
-                    <div>
-                        <strong>Vinho Frances Bois Mirail Rouge tinto 750 ml</strong>
-                        <p>R$ 31,90</p>
-                        <button type="submit">Adicionar</button>
-                    </div>
-                </figure>
-                <figure>
-                    <img src="imagens/img25.png">
-                    <div>
-                        <strong>Vinho Chileno Tres Toros cabernet sauvignon tinto 750 ml</strong>
-                        <p>R$ 29,90</p>
-                        <button type="submit">Adicionar</button>
-                    </div>
-                </figure>
-                <figure>
-                    <img src="imagens/img26.png">
-                    <div>
-                        <strong>Vinho Português Terra Mãe tinto 750 ml</strong>
-                        <p>R$ 30,90</p>
-                        <button type="submit">Adicionar</button>
-                    </div>
+
+                </div>
                 </figure>
             </section>
 
@@ -393,7 +424,7 @@
 
         <section id="higiene">
             <h3>Higiene e Limpeza</h3>
-           
+
             <section class="container">
                 <figure>
                     <img src="imagens/img27.png">
@@ -635,31 +666,7 @@
                         <button type="submit">Adicionar</button>
                     </div>
                 </figure>
-                <figure>
-                    <img src="imagens/img55.png">
-                    <div>
-                        <strong>Maçã Senninha pacote 1kg</strong>
-                        <p>R$ 4,49</p>
-                        <button type="submit">Adicionar</button>
-                    </div>
-                </figure>
-                <figure>
-                    <img src="imagens/img56.png">
-                    <div>
-                        <strong>Mamão papaya unid.</strong>
-                        <p>R$ 2,99</p>
-                        <button type="submit">Adicionar</button>
-                    </div>
-                </figure>
-                <figure>
-                    <img src="imagens/img48.png">
-                    <div>
-                        <strong>Abacaxi pérola unid</strong>
-                        <p>R$ 5,39</p>
-                        <button type="submit">Adicionar</button>
-                    </div>
-                </figure>
-            </section>
+              
 
         </section>
 
@@ -699,37 +706,86 @@
                         <button type="submit">Adicionar</button>
                     </div>
                 </figure>
+                <figure>
+                    <img src="imagens/salmao.png">
+                    <div>
+                        <strong>Lombo porcionado de Salmão - S/ pele - Congelado - 500g</strong>
+                        <p>R$ 35,99</p>
+                        <button type="submit">Adicionar</button>
+                    </div>
+                </figure>
             </section>
-            
+
         </section>
 
     </main>
 
+    <script>
+
+
+        function clickMenu() {
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
+        }
+
+        function mudouTamanho() {
+            if (window.innerWidth >= 769) {
+                intent.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+
+        window.onscroll = function () { myFunction() };
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+
+    </script>
 
     <footer>
 
         <section id="rodape">
             <form id="contato">
                 <span>Alguma dúvida? Entre em contato: </span>
+
                 <input type="text" name="nome" placeholder="Nome:">
                 <input type="text" name="email" placeholder="E-Mail:">
                 <input type="text" name="assunto" placeholder="Assunto:">
                 <textarea name="msg" cols="40" rows="4" placeholder="Mensagem:"></textarea>
                 <button type="submit">Enviar</button>
             </form>
-            <div id="meio">
-                <div id="redes">
-                    <i class="fa-brands fa-whatsapp"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-facebook"></i>
-                </div>
-                <div id="pagamentos">
-                    <p>Formas de Pagamento:</p>
-                    
-                </div>
+
+            <div class="menu2">
+                <a class="link" style="--color: #3b5998">
+                    <i class="link-icon fa fa-facebook"></i>
+                    <span class="link-title">Facebook</span>
+                </a>
+                <a class="link" style="--color: #1baf16;">
+                    <i class="link-icon fa fa-whatsapp"></i>
+                    <span class="link-title">Whatsapp</span>
+                </a>
+                <a class="link" style="--color: #d430c4;">
+                    <i class="link-icon fa fa-instagram"></i>
+                    <span class="link-title">Instagram</span>
+                </a>
+            </div>
+            <div id="pagamentos">
+                <p>Formas de Pagamento:</p>
+                <img src="icones/aceitamos-cartões.png" width="250px" height="250px">
+            </div>
             </div>
             <div id="alunos">
-                <p class="container_alunos">Anderson de Oliveira - 33065551</p>
+                <p class="container_alunos">Anderson Dourado- 33065551</p>
                 <p class="container_alunos">Diego Ribeiro Duarte - 28027639</p>
                 <p class="container_alunos">Jose Luis H. Higa Jr. - 28106318</p>
                 <p class="container_alunos">Rodrigo Veras de Almeida - 28183932</p>

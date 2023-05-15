@@ -1,5 +1,8 @@
-body,
-html {
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+
+
+body,html {
     scroll-behavior: smooth;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: #ffffff;
@@ -7,10 +10,15 @@ html {
 
 header{
     border: 1px transparent;
-    margin-left: 35px;
-    margin-right: 35px;
-    border-radius: 15px 15px 0 0;
     background-color: #ffffff;
+    overflow: hidden;
+    width: 100%;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 #topo {
@@ -75,28 +83,50 @@ form img {
     font-weight: bold;
 }
 
-nav {
-    background-color: #d21717;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-around;   
+i#burguer{
+    display: none;
 }
 
-nav a {
-    float: left;
+menu{
+    display: flex;
+    background-color: #EF476F;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+menu > ul > li {
+    display: inline-block;
+    width: 150px;
+    list-style: none;
     color: white;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    overflow: hidden;
 }
+
+menu a{
+    list-style: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    float: left;
+    padding: 14px 16px;
+    
+}
+
 .parallax {
+    display: flex;
+    flex-direction: column;
     background-image: url("parallax/banner.png");
     min-height: 500px; 
+    padding: 100px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-  }
+    background-size: contain;
+
+}
+
 
 #banner figure{
     width: 100%;
@@ -219,16 +249,72 @@ section h3 {
     cursor: pointer;
 }
 
-#redes {
+.menu2 {
+    padding: 1rem;
+    background-color: #fff;
+    position: relative;
+    width: calc(25px + 4 * 40px + 4rem);
     display: flex;
+    justify-content: center;
+    border-radius: 20px 20px;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.075);
+    margin-left: 250px;
+  }
+  .link {
+    display: inline-flex;
+    cursor: pointer;
+    justify-content: center;
     align-items: center;
-}
-
-#redes i {
-    font-size: 24px;
-    margin-right: 10px;
-}
-
+    width: 70px;
+    height: 50px;
+    border-radius: 99em;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transform-origin: center left;
+    transition: width 0.2s ease-in;
+    text-decoration: none;
+    color: grid;
+  }
+  .link:before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    display: flex;
+    border-radius: 99em;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+    transform-origin: center right;
+    background-color: #eee;
+  }
+  .link:hover, .link:focus {
+    outline: 0;
+    width: 140px;
+  }
+  .link:hover:before,
+  .link:hover .link-title {
+    transform: translateX(0%);
+  }
+  .link-icon {
+    color: var(--color);
+    font-size: 27px !important;
+    display: block;
+    flex-shrink: 0;
+    left: 15px;
+    position: absolute;
+  }
+  .link-title {
+    color: var(--color);
+    transform: translateX(100%);
+    transition: transform 0.2s ease-in;
+    display: block;
+    text-align: center;
+    text-indent: 20px;
+    width: 100%;
+  }
 #pagamentos {
     display: flex;
     align-items: center;
@@ -242,3 +328,170 @@ section h3 {
     height: 30px;
     margin-right: 10px;
 }
+
+
+@media only screen and (max-width: 768px) and (min-width: 300px) {
+
+    .sticky {
+        display:block;
+    }
+    
+    #topo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+        padding: 5px;
+    }
+    
+    #logo img {
+        height: 60px;
+        margin-left: 0px;
+    }
+    
+    #logo section {
+        font-size: 28px;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+    
+    form {
+        display: flex;
+        align-items: center;
+        margin-left: 0px;
+    }
+    
+    input[type="text"] {
+        height: 30px;
+        width: 60px;
+        border: 1px solid rgb(219, 214, 214);
+        border-radius: 8px 0px 0px 8px;
+        padding: 5px;
+    }
+    
+    form img {
+        height: 25px;
+        cursor: pointer;
+        border: 1px solid #118AB2;
+        background-color: #118AB2;
+        border-radius: 0px 8px 8px 0px;
+    }
+    
+    #carrinho {
+        display: flex;
+        align-items: center;
+        border: 0px solid rgb(215, 215, 215);
+        padding: 2px;
+        background-color: transparent;
+        margin-left: 25px;
+    }
+    
+    #carrinho img {
+        height: 20px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    
+    #carrinho p {
+        font-weight: bold;
+    }
+
+    menu{
+        display: none;
+        width: 270px;
+        overflow: hidden;
+        margin-left: 40px;
+    }
+    
+    menu > ul{
+        list-style-type: none;
+        box-sizing: border-box;
+        margin-right: 120px;
+        width: 200px;
+
+    }
+    
+    menu > ul > li > a{
+
+        display: block;
+        padding: 5px;
+        text-decoration: none;
+        text-align: center;
+        color: white;
+        border-top: 2px solid #ef476f;
+        float: none;
+
+    }
+    
+    menu > ul> li > a:hover {
+        background-color: #d6234d;
+    }
+
+    i#burguer{
+        display: block;
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    i#burguer:hover{
+        background-color: white;
+        color: black;
+    }
+    #cartaz {
+        width: 300px;
+        height: 620px;
+        overflow: auto;
+    
+    }
+    
+    #cartaz img {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-shrink: cover;
+        scroll-behavior: smooth;
+    }
+    
+    .parallax {
+        display: none;
+       
+      }
+    
+    #rodape {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: #3f3636;
+        color: #fff;
+        padding: 20px;
+        font-size: 16px;
+        border-radius: 15px;
+    }
+
+    #contato input[type="text"]{
+        width: 290px;
+        height: 5px;
+        padding: 10px;
+        margin-top: 3px;
+    }
+    #contato{
+     margin-left: 30px;
+     height: px;
+    }
+
+    .menu2 {
+        display: inline-flex;
+        width: 450px;
+        height: 50px;
+        text-align: center;
+        margin-left: 0px;
+        border: solid 2px black;
+        align-items: stretch ;
+      }
+
+    #pagamentos{
+        width: 150px;
+        height: 150px;
+    }
+    }
